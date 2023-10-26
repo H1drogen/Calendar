@@ -1,0 +1,21 @@
+.week-segment {
+    border: black solid 1px;
+}
+
+.date-columns {
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+}
+
+.week-header {
+    border-bottom: 1px solid black;
+    margin: 0;
+    max-height: 50px;
+    text-align: center;
+    padding: 1%;
+    font-size: 1.2em;
+}
+
+.go-to-date-column {
+    box-shadow: inset -5px 0 0 green, inset 0 -5px 0 green, inset 5px 0 0 green, inset 0 5px 0 green;
+}

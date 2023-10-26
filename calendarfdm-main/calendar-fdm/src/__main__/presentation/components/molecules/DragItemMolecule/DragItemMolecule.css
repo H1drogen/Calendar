@@ -1,0 +1,10 @@
+.drag-item {
+    padding: 1%;
+    min-width: 100px;
+    height: 50px;
+    background-color: yellow;
+    border: black 2px solid;
+    border-radius: 3px;
+    grid-area: 1 / 1 / 1 / 1;
+    transition: 0.5s;
+}

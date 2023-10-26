@@ -1,0 +1,4 @@
+/* 
+    An empty js folder that tests are redirected to when they attempt to 
+    import a .css file. This prevents errors in the testing 
+*/
