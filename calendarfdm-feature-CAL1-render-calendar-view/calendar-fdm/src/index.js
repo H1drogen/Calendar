@@ -3,6 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Calendar } from '@fullcalendar/core'
+import interactionPlugin from '@fullcalendar/interaction'
+import dayGridPlugin from '@fullcalendar/daygrid'
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -10,6 +15,21 @@ root.render(
     <App />
   </React.StrictMode>
 );
+
+const calendarEl = document.getElementById('calendar')
+const calendar = new Calendar(calendarEl, {
+    plugins: [
+        interactionPlugin,
+        dayGridPlugin
+    ],
+    editable: true,
+    events: [
+        { title: 'Meeting', start: new Date() }
+    ]
+})
+
+calendar.render()
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
