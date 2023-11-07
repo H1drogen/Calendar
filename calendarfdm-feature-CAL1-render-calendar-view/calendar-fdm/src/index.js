@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Calendar } from '@fullcalendar/core'
-import interactionPlugin from '@fullcalendar/interaction'
+import interactionPlugin, { Draggrable } from '@fullcalendar/interaction'
 import dayGridPlugin from '@fullcalendar/daygrid'
 
 
@@ -18,10 +18,17 @@ root.render(
 
 const calendarEl = document.getElementById('calendar')
 const calendar = new Calendar(calendarEl, {
+    selectable: true,
+    headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay'
+    },
     plugins: [
         interactionPlugin,
         dayGridPlugin
     ],
+    droppable: true,
     editable: true,
     events: [
         { title: 'Meeting', start: new Date() }
