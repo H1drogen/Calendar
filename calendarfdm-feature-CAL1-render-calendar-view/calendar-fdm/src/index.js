@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Calendar } from '@fullcalendar/core'
-import interactionPlugin, { Draggrable } from '@fullcalendar/interaction'
+import interactionPlugin, { Draggable } from '@fullcalendar/interaction'
 import dayGridPlugin from '@fullcalendar/daygrid'
 
 
